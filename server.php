@@ -11,7 +11,7 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
-    $mysqli = new mysqli("localhost", "root", "#^&%SV4J(XfEg!e", "test");
+    $mysqli = new mysqli("localhost", "login", "password", "test");
     $mysqli->set_charset("utf8");
 
     /* проверяем соединение */
@@ -49,16 +49,16 @@ require 'PHPMailer/src/SMTP.php';
     $mail->Host = 'ssl://smtp.mail.ru';
 
     $mail->SMTPAuth = true;
-    $mail->Username = 'nruneev@mail.ru'; // логин от вашей почты
-    $mail->Password = '1WinnoW1_1'; // пароль от почтового ящика
+    $mail->Username = 'fg@mail.ru'; // логин от вашей почты
+    $mail->Password = 'qwerty'; // пароль от почтового ящика
     $mail->SMTPSecure = 'SSL';
     $mail->Port = '465';
 
     $mail->CharSet = 'UTF-8';
-    $mail->From = 'nruneev@mail.ru';  // адрес почты, с которой идет отправка
-    $mail->FromName = 'Евгения'; // имя отправителя
+    $mail->From = 'fg@mail.ru';  // адрес почты, с которой идет отправка
+    $mail->FromName = 'Name'; // имя отправителя
 try {
-    $mail->addAddress('evgeniya.kovalishina@mail.ru', 'Евгения');
+    $mail->addAddress('ty@mail.ru', 'Name');
 } catch (\PHPMailer\PHPMailer\Exception $e) {
 }
 
